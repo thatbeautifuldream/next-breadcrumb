@@ -42,7 +42,7 @@ import Breadcrumbs from "@/components/breadcrumbs";
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Example</h2>
         <p className="mb-4">
-          Here's a live example of the Breadcrumbs component:
+          Here&apos;s a live example of the Breadcrumbs component:
         </p>
 
         <Breadcrumbs
