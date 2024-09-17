@@ -1,17 +1,17 @@
-# Next Breadcrumb
+# Breadcrumbs for your everyday React apps
 
-Next Breadcrumb is a flexible and customizable breadcrumbs navigation component for Next.js applications. Created and maintained by [Milind Mishra](https://milindmishra.com).
+Breadcrumbs is a flexible and customizable breadcrumbs navigation component for React applications.
 
 ## Features
 
-- Easy to integrate with Next.js, React, and TailwindCSS projects
+- Easy to integrate with React, Next.js, and TailwindCSS projects
 - Customizable appearance (icons, separators, styles)
 - Accessibility-friendly
 - TypeScript support
 
 ## Usage
 
-To use Next Breadcrumb in your project, import it and include it in your component tree:
+To use Breadcrumbs in your project, copy paste component from [`src/components/breadcrumbs.tsx`](./src/components/breadcrumbs.tsx) and include it in your component tree:
 
 ```tsx
 import Breadcrumbs, { type BreadcrumbItem } from "@/components/breadcrumbs";
