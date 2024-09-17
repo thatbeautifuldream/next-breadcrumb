@@ -1,11 +1,10 @@
-import { Home } from "lucide-react";
-import { Route } from "next";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Home } from "lucide-react";
+import Link from "next/link";
 
 export type BreadcrumbItem = {
   name: string;
-  href?: Route;
+  href?: string;
   current?: boolean;
 };
 
