@@ -1,6 +1,7 @@
 import Breadcrumbs, { BreadcrumbItem } from "@/components/breadcrumbs";
 import { ChevronRight } from "lucide-react";
 import Script from "next/script";
+import Link from "next/link";
 
 export default function Home() {
   const breadcrumbsExample = `
@@ -73,9 +74,18 @@ import { ChevronRight } from "lucide-react";
         {JSON.stringify(structuredData)}
       </Script>
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">
+        <h1 className="text-3xl font-bold mb-2">
           Breadcrumbs Component Documentation
         </h1>
+        <p className="text-sm text-gray-600 mb-6">
+          Created by{" "}
+          <Link
+            href="https://milindmishra.com"
+            className="text-blue-600 hover:underline"
+          >
+            Milind Mishra
+          </Link>
+        </p>
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Usage</h2>
@@ -166,6 +176,29 @@ import { ChevronRight } from "lucide-react";
             <code>{maxItemsExample}</code>
           </pre>
         </section>
+
+        <footer className="mt-12 pt-8 border-t border-gray-200">
+          <p className="text-sm text-gray-600">
+            © {new Date().getFullYear()} Next Breadcrumb. Created and maintained
+            by{" "}
+            <Link
+              href="https://milindmishra.com"
+              className="text-blue-600 hover:underline"
+            >
+              Milind Mishra
+            </Link>
+            .
+          </p>
+          <p className="text-sm text-gray-600 mt-2">
+            For more projects and information, visit{" "}
+            <Link
+              href="https://milindmishra.com"
+              className="text-blue-600 hover:underline"
+            >
+              milindmishra.com
+            </Link>
+          </p>
+        </footer>
       </div>
     </>
   );
