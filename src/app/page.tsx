@@ -191,9 +191,11 @@ export default function Breadcrumbs({
             pages. Here&apos;s a basic example:
           </p>
 
-          <pre className="bg-gray-100 p-4 rounded-md mb-4">
-            <code>{breadcrumbsExample}</code>
-          </pre>
+          <div className="overflow-x-auto">
+            <pre className="bg-gray-100 p-4 rounded-md mb-4 whitespace-pre-wrap">
+              <code>{breadcrumbsExample}</code>
+            </pre>
+          </div>
         </section>
 
         <section className="mb-8">
@@ -245,18 +247,22 @@ export default function Breadcrumbs({
 
           <h3 className="text-xl font-semibold mb-2">Basic Usage</h3>
           <Breadcrumbs pages={examplePages} />
-          <pre className="bg-gray-100 p-4 rounded-md my-4">
-            <code>{breadcrumbsExample}</code>
-          </pre>
+          <div className="overflow-x-auto">
+            <pre className="bg-gray-100 p-4 rounded-md my-4 whitespace-pre-wrap">
+              <code>{breadcrumbsExample}</code>
+            </pre>
+          </div>
 
           <h3 className="text-xl font-semibold mb-2 mt-6">Custom Separator</h3>
           <Breadcrumbs
             pages={examplePages}
             separator={<ChevronRight className="h-4 w-4" />}
           />
-          <pre className="bg-gray-100 p-4 rounded-md my-4">
-            <code>{customSeparatorExample}</code>
-          </pre>
+          <div className="overflow-x-auto">
+            <pre className="bg-gray-100 p-4 rounded-md my-4 whitespace-pre-wrap">
+              <code>{customSeparatorExample}</code>
+            </pre>
+          </div>
 
           <h3 className="text-xl font-semibold mb-2 mt-6">Max Items</h3>
           <Breadcrumbs
@@ -269,9 +275,11 @@ export default function Breadcrumbs({
             ]}
             maxItems={3}
           />
-          <pre className="bg-gray-100 p-4 rounded-md my-4">
-            <code>{maxItemsExample}</code>
-          </pre>
+          <div className="overflow-x-auto">
+            <pre className="bg-gray-100 p-4 rounded-md my-4 whitespace-pre-wrap">
+              <code>{maxItemsExample}</code>
+            </pre>
+          </div>
         </section>
 
         <section className="mb-8">
@@ -286,8 +294,8 @@ export default function Breadcrumbs({
             </li>
             <li>Copy and paste the following code into the file:</li>
           </ol>
-          <div className="relative">
-            <pre className="bg-gray-100 p-4 rounded-md mb-4">
+          <div className="relative overflow-x-auto">
+            <pre className="bg-gray-100 p-4 rounded-md mb-4 whitespace-pre-wrap">
               <code>{componentCode}</code>
             </pre>
             <button
