@@ -282,7 +282,7 @@ export default function Breadcrumbs({
           </p>
           <ol className="list-decimal pl-6 mb-4">
             <li>
-              Create a new file at <code>src/components/Breadcrumbs.tsx</code>
+              Create a new file at <code>src/components/breadcrumbs.tsx</code>
             </li>
             <li>Copy and paste the following code into the file:</li>
           </ol>
