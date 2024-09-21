@@ -161,10 +161,19 @@ export default function Breadcrumbs({
       <Script id="breadcrumbs-schema" type="application/ld+json">
         {JSON.stringify(structuredData)}
       </Script>
+
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-2">
           Breadcrumbs for your everyday React apps
         </h1>
+        <p className="text-sm text-gray-600 mb-2">
+          <Link
+            href="https://github.com/thatbeautifuldream/next-breadcrumb"
+            className="text-blue-600 hover:underline"
+          >
+            thatbeautifuldream/next-breadcrumb
+          </Link>
+        </p>
         <p className="text-sm text-gray-600 mb-6">
           Created by{" "}
           <Link
