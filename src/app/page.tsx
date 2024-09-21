@@ -66,7 +66,7 @@ import { ChevronRight } from "lucide-react";
       name: "Milind Mishra",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.milindmishra.com/_next/image?url=%2Fassets%2Fmilindmishra.png&w=256&q=75",
+        url: "https://www.milindmishra.com/assets/milindmishra.png",
       },
     },
   };
@@ -117,7 +117,7 @@ export default function Breadcrumbs({
       <ol role="list" className="flex items-center space-x-4">
         {showHomeIcon && (
           <li>
-            <Link href="/" className="text-gray-400 hover:text-gray-500">
+            <Link href="/" className="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400">
               {homeIcon}
               <span className="sr-only">Home</span>
             </Link>
@@ -125,7 +125,7 @@ export default function Breadcrumbs({
         )}
         {showEllipsis && (
           <li className="text-sm">
-            <span className="text-gray-500">...</span>
+            <span className="text-gray-500 dark:text-gray-400">...</span>
           </li>
         )}
         {visiblePages.map((page, index) => (
@@ -136,8 +136,8 @@ export default function Breadcrumbs({
                 href={page.href ?? "#"}
                 aria-current={page.current ? "page" : undefined}
                 className={cn(
-                  "ml-4 text-sm font-medium hover:text-gray-700",
-                  page.current ? "text-gray-900" : "text-gray-500"
+                  "ml-4 text-sm font-medium hover:text-gray-700 dark:hover:text-gray-300",
+                  page.current ? "text-gray-900 dark:text-gray-100" : "text-gray-500 dark:text-gray-400"
                 )}
               >
                 {page.name}
@@ -162,45 +162,45 @@ export default function Breadcrumbs({
         {JSON.stringify(structuredData)}
       </Script>
 
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-2">
+      <div className="container mx-auto px-4 py-8 bg-background text-foreground">
+        <h1 className="text-3xl font-bold mb-2 dark:text-white">
           Breadcrumbs for your everyday React apps
         </h1>
-        <p className="text-sm text-gray-600 mb-2">
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
           <Link
             href="https://github.com/thatbeautifuldream/next-breadcrumb"
-            className="text-blue-600 hover:underline"
+            className="text-blue-600 hover:underline dark:text-blue-400"
           >
             thatbeautifuldream/next-breadcrumb
           </Link>
         </p>
-        <p className="text-sm text-gray-600 mb-6">
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
           Created by{" "}
           <Link
             href="https://milindmishra.com"
-            className="text-blue-600 hover:underline"
+            className="text-blue-600 hover:underline dark:text-blue-400"
           >
             Milind Mishra
           </Link>
         </p>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Usage</h2>
+          <h2 className="text-2xl font-semibold mb-4 dark:text-white">Usage</h2>
           <p className="mb-4">
             The Breadcrumbs component is a flexible navigation tool for your
             pages. Here&apos;s a basic example:
           </p>
 
           <div className="overflow-x-auto">
-            <pre className="bg-gray-100 p-4 rounded-md mb-4 whitespace-pre-wrap">
-              <code>{breadcrumbsExample}</code>
+            <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mb-4 whitespace-pre-wrap">
+              <code className="dark:text-gray-300">{breadcrumbsExample}</code>
             </pre>
           </div>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Props</h2>
-          <ul className="list-disc pl-6">
+          <h2 className="text-2xl font-semibold mb-4 dark:text-white">Props</h2>
+          <ul className="list-disc pl-6 dark:text-gray-300">
             <li>
               <strong>pages</strong>: An array of BreadcrumbItem objects, each
               containing:
@@ -243,28 +243,38 @@ export default function Breadcrumbs({
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Examples</h2>
+          <h2 className="text-2xl font-semibold mb-4 dark:text-white">
+            Examples
+          </h2>
 
-          <h3 className="text-xl font-semibold mb-2">Basic Usage</h3>
+          <h3 className="text-xl font-semibold mb-2 dark:text-white">
+            Basic Usage
+          </h3>
           <Breadcrumbs pages={examplePages} />
           <div className="overflow-x-auto">
-            <pre className="bg-gray-100 p-4 rounded-md my-4 whitespace-pre-wrap">
-              <code>{breadcrumbsExample}</code>
+            <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md my-4 whitespace-pre-wrap">
+              <code className="dark:text-gray-300">{breadcrumbsExample}</code>
             </pre>
           </div>
 
-          <h3 className="text-xl font-semibold mb-2 mt-6">Custom Separator</h3>
+          <h3 className="text-xl font-semibold mb-2 mt-6 dark:text-white">
+            Custom Separator
+          </h3>
           <Breadcrumbs
             pages={examplePages}
             separator={<ChevronRight className="h-4 w-4" />}
           />
           <div className="overflow-x-auto">
-            <pre className="bg-gray-100 p-4 rounded-md my-4 whitespace-pre-wrap">
-              <code>{customSeparatorExample}</code>
+            <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md my-4 whitespace-pre-wrap">
+              <code className="dark:text-gray-300">
+                {customSeparatorExample}
+              </code>
             </pre>
           </div>
 
-          <h3 className="text-xl font-semibold mb-2 mt-6">Max Items</h3>
+          <h3 className="text-xl font-semibold mb-2 mt-6 dark:text-white">
+            Max Items
+          </h3>
           <Breadcrumbs
             pages={[
               { name: "Home", href: "/" },
@@ -276,14 +286,16 @@ export default function Breadcrumbs({
             maxItems={3}
           />
           <div className="overflow-x-auto">
-            <pre className="bg-gray-100 p-4 rounded-md my-4 whitespace-pre-wrap">
-              <code>{maxItemsExample}</code>
+            <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md my-4 whitespace-pre-wrap">
+              <code className="dark:text-gray-300">{maxItemsExample}</code>
             </pre>
           </div>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Quick Start</h2>
+          <h2 className="text-2xl font-semibold mb-4 dark:text-white">
+            Quick Start
+          </h2>
           <p className="mb-4">
             To get started quickly, you can copy and paste the Breadcrumbs
             component directly into your project:
@@ -295,8 +307,8 @@ export default function Breadcrumbs({
             <li>Copy and paste the following code into the file:</li>
           </ol>
           <div className="relative overflow-x-auto">
-            <pre className="bg-gray-100 p-4 rounded-md mb-4 whitespace-pre-wrap">
-              <code>{componentCode}</code>
+            <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mb-4 whitespace-pre-wrap">
+              <code className="dark:text-gray-300">{componentCode}</code>
             </pre>
             <button
               onClick={handleCopy}
@@ -328,23 +340,23 @@ export default function Breadcrumbs({
           </p>
         </section>
 
-        <footer className="mt-12 pt-8 border-t border-gray-200">
-          <p className="text-sm text-gray-600">
+        <footer className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
             © {new Date().getFullYear()} Next Breadcrumb. Created and maintained
             by{" "}
             <Link
               href="https://milindmishra.com"
-              className="text-blue-600 hover:underline"
+              className="text-blue-600 hover:underline dark:text-blue-400"
             >
               Milind Mishra
             </Link>
             .
           </p>
-          <p className="text-sm text-gray-600 mt-2">
+          <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
             For more projects and information, visit{" "}
             <Link
               href="https://milindmishra.com"
-              className="text-blue-600 hover:underline"
+              className="text-blue-600 hover:underline dark:text-blue-400"
             >
               milindmishra.com
             </Link>
