@@ -24,7 +24,7 @@ export default function Breadcrumbs({
     <svg
       className="h-5 w-5 flex-shrink-0 text-gray-300"
       fill="currentColor"
-      viewBox="0 0 20 20"
+      viewBox="0 20"
       aria-hidden="true"
     >
       <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
@@ -42,7 +42,7 @@ export default function Breadcrumbs({
       <ol role="list" className="flex items-center space-x-4">
         {showHomeIcon && (
           <li>
-            <Link href="/" className="text-gray-400 hover:text-gray-500">
+            <Link href="/" className="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400">
               {homeIcon}
               <span className="sr-only">Home</span>
             </Link>
@@ -50,7 +50,7 @@ export default function Breadcrumbs({
         )}
         {showEllipsis && (
           <li className="text-sm">
-            <span className="text-gray-500">...</span>
+            <span className="text-gray-500 dark:text-gray-400">...</span>
           </li>
         )}
         {visiblePages.map((page, index) => (
@@ -61,8 +61,8 @@ export default function Breadcrumbs({
                 href={page.href ?? "#"}
                 aria-current={page.current ? "page" : undefined}
                 className={cn(
-                  "ml-4 text-sm font-medium hover:text-gray-700",
-                  page.current ? "text-gray-900" : "text-gray-500"
+                  "ml-4 text-sm font-medium hover:text-gray-700 dark:hover:text-gray-300",
+                  page.current ? "text-gray-900 dark:text-gray-100" : "text-gray-500 dark:text-gray-400"
                 )}
               >
                 {page.name}
